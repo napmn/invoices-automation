@@ -1,0 +1,24 @@
+{
+  "general": {
+    "invoice_template_path": "~/path_to_template/invoice_template.docx",
+    "output_folder_path": "~/Documents/invoices/",
+    "invoice_base_name": "invoice"
+  },
+  "paragraphs": {
+    "5": {
+      "variables": ["invoice_issue_date"]
+    },
+    "13": {
+      "variables": ["mandays", "md_rate", "total"]
+    }
+  },
+  "regexes": {
+    "invoice_issue_date": "\\d{1,2}\\.\\s*\\d{1,2}\\.\\s*\\d{4}",
+    "mandays": "(\\d{1,2})(?=\\s*MD)",
+    "md_rate": "(\\d+)(?=\\s*Eur\\s*\\d)",
+    "total": "(\\d+)(?=\\s*Eur\\s*$)"
+  },
+  "constants": {
+    "md_rate": 123456
+  }
+}

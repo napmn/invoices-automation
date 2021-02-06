@@ -1,0 +1,6 @@
+*.docx
+*.pdf
+__pycache__/
+venv/
+.DS_Store
+invoice_config.json
